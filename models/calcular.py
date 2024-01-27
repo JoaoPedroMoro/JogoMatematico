@@ -7,7 +7,7 @@ class Calcular:
         self.__dificuldade: int = dificuldade
         self.__valor1: float = self._gerar_valor
         self.__valor2: float = self._gerar_valor
-        self.__operacao: int = randint(1, 3)  # 1 - soma, 2 - subtração e 3 - multiplicação
+        self.__operacao: int = randint(1, 4)  # 1 - soma, 2 - subtração, 3 - multiplicação e 4 - divisão
         self.__resultado: float = self._gerar_resultado
 
     @property
@@ -38,6 +38,8 @@ class Calcular:
             op = 'Diminuir'
         elif self.operacao == 3:
             op = 'Multiplicar'
+        elif self.operacao == 4:
+            op = 'Dividir'
         else:
             op = 'Operação desconhecida'
         return f'Valor 1: {self.valor1}\nValor 2: {self.valor2}\nDificuldade: {self.dificuldade}\nOperação: {op}'
@@ -45,15 +47,15 @@ class Calcular:
     @property
     def _gerar_valor(self: object) -> int:
         if self.dificuldade == 1:
-            return randint(0, 10)
+            return randint(1, 10)
         if self.dificuldade == 2:
-            return randint(0, 100)
+            return randint(1, 100)
         if self.dificuldade == 3:
-            return randint(0, 1000)
+            return randint(1, 1000)
         elif self.dificuldade == 4:
-            return randint(0, 10000)
+            return randint(1, 10000)
         else:
-            return randint(0, 50)
+            return randint(1, 50)
 
     @property
     def _gerar_resultado(self: object) -> int:
@@ -61,8 +63,10 @@ class Calcular:
             return self.valor1 + self.valor2
         elif self.operacao == 2:  # Diminuir
             return self.valor1 - self.valor2
-        else:  # Multiplicar
+        elif self.operacao == 3:  # Multiplicar
             return self.valor1 * self.valor2
+        else:  # Divisão
+            return self.valor1 / self.valor2
 
     @property
     def _op_simbolo(self: object) -> str:
@@ -70,8 +74,10 @@ class Calcular:
             return '+'
         elif self.operacao == 2:
             return '-'
-        else:
+        elif self.operacao == 3:
             return '*'
+        else:  # elif self.operacao == 4:
+            return '/'
 
     def checar_resultado(self: object, resposta: int) -> bool:
         certo: bool = False
