@@ -53,7 +53,7 @@ class Calcular:
         elif self.dificuldade == 4:
             return randint(0, 10000)
         else:
-            return randint(0, 100000)
+            return randint(0, 50)
 
     @property
     def _gerar_resultado(self: object) -> int:
