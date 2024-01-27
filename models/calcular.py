@@ -5,9 +5,9 @@ class Calcular:
 
     def __init__(self: object, dificuldade: int, /) -> None:
         self.__dificuldade: int = dificuldade
+        self.__operacao: int = randint(1, 4)  # 1-soma, 2-subtração, 3-multiplicação e 4-divisão
         self.__valor1: float = self._gerar_valor
         self.__valor2: float = self._gerar_valor
-        self.__operacao: int = randint(1, 4)  # 1 - soma, 2 - subtração, 3 - multiplicação e 4 - divisão
         self.__resultado: float = self._gerar_resultado
 
     @property
