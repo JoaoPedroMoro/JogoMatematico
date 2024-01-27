@@ -65,7 +65,7 @@ class Calcular:
             return self.valor1 - self.valor2
         elif self.operacao == 3:  # Multiplicar
             return self.valor1 * self.valor2
-        else:  # Divisão
+        else:  #elif self.operacao == 4:  # Divisão
             return self.valor1 / self.valor2
 
     @property

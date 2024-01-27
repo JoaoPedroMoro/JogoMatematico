@@ -17,7 +17,7 @@ As dificuldades são as seguintes:
 - Caso a dificuldade não estiver no intervalo entre 1 e 4, os valores que devem ser calculados serão escolhidos aleatoriamente entre 0 e 50.
 
 ## Versão 2
-O jogo possui uma operação nova, a divisão. Com isso, deve ser alterado o intervalo de escolha dos números, pois não pode ocorrer divisão por 0.
+O jogo possui uma nova operação, a divisão. Com isso, deve ser alterado o intervalo de escolha dos números, pois não pode ocorrer divisão por 0.
 As dificuldades são as seguintes:
 ### 1
 - Os valores que devem ser calculados são escolhidos aleatoriamente entre 1 e 10.
