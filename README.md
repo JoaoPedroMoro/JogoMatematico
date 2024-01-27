@@ -6,13 +6,13 @@ Para jogá-lo é necessário informar a dificuldade do jogo como parâmetro ao i
 O jogo possui 3 operações disponíveis: soma, subtração e multiplicação. É acrescentado 1 ponto por acerto e não há limite de jogadas.
 As dificuldades são as seguintes:
 ### 1
-- Os valores que devem ser calculados são escolhidos aleatoriamente entre 0 e 10.
+- Os valores a serem calculados são escolhidos aleatoriamente entre 0 e 10.
 ### 2
-- Os valores que devem ser calculados são escolhidos aleatoriamente entre 0 e 100.
+- Os valores a serem calculados são escolhidos aleatoriamente entre 0 e 100.
 ### 3
-- Os valores que devem ser calculados são escolhidos aleatoriamente entre 0 e 1000.
+- Os valores a serem calculados são escolhidos aleatoriamente entre 0 e 1000.
 ### 4
-- Os valores que devem ser calculados são escolhidos aleatoriamente entre 0 e 10000.
+- Os valores a serem calculados são escolhidos aleatoriamente entre 0 e 10000.
 ### Outros valores
 - Caso a dificuldade não estiver no intervalo entre 1 e 4, os valores que devem ser calculados serão escolhidos aleatoriamente entre 0 e 50.
 
@@ -20,12 +20,12 @@ As dificuldades são as seguintes:
 O jogo possui uma nova operação, a divisão. Com isso, deve ser alterado o intervalo de escolha dos números, pois não pode ocorrer divisão por 0.
 As dificuldades são as seguintes:
 ### 1
-- Os valores que devem ser calculados são escolhidos aleatoriamente entre 1 e 10.
+- Os valores a serem calculados são escolhidos aleatoriamente entre 1 e 10.
 ### 2
-- Os valores que devem ser calculados são escolhidos aleatoriamente entre 1 e 100.
+- Os valores a serem calculados são escolhidos aleatoriamente entre 1 e 100.
 ### 3
-- Os valores que devem ser calculados são escolhidos aleatoriamente entre 1 e 1000.
+- Os valores a serem calculados são escolhidos aleatoriamente entre 1 e 1000.
 ### 4
-- Os valores que devem ser calculados são escolhidos aleatoriamente entre 1 e 10000.
+- Os valores a serem calculados são escolhidos aleatoriamente entre 1 e 10000.
 ### Outros valores
 - Caso a dificuldade não estiver no intervalo entre 1 e 4, os valores que devem ser calculados serão escolhidos aleatoriamente entre 0 e 50.
