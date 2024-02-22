@@ -33,6 +33,7 @@ As dificuldades são as seguintes:
 ## Versão 3
 O jogo foi modificado para guardar as 5 maiores pontuações obtidas na máquina e salvar o nome de cada usuário que registrou essa pontuação.
 Também foi modificado a lógica do jogo quando a operação é de divisão, sendo necessário informar apenas as 2 primeiras casas decimais aproximadas do número obtido.
+Também ocorreu a adição da pasta jogo-matematico, a qual possui um arquivo executável que pode ser utilizado em ambientes que não possuem python, assim, tornando fácil a divulgação e a diversão do jogo.
 As dificuldades são as seguintes:
 ### 1
 - Os valores a serem calculados são escolhidos aleatoriamente entre 1 e 10.
