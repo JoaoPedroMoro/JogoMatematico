@@ -1,0 +1,2 @@
+rm -r nome_da_pasta_alvo
+cxfreeze nome_arquivo.py --target-dir nome_da_pasta_alvo
