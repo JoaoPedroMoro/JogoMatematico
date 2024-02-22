@@ -6,9 +6,16 @@ class Calcular:
     def __init__(self: object, dificuldade: int, /) -> None:
         self.__dificuldade: int = dificuldade
         self.__operacao: int = randint(1, 4)  # 1-soma/2-subtração/3-multiplicação/4-divisão
-        self.__valor1: float = self._gerar_valor
-        self.__valor2: float = self._gerar_valor
-        self.__resultado: float = self._gerar_resultado
+        if self.__operacao == 4:
+            val1, val2 = self._gerar_valor_divisao
+            self.__valor1 = val1
+            self.__valor2 = val2
+            res = round(val1 / val2, 2)
+            self.__resultado = res
+        else:
+            self.__valor1: float = self._gerar_valor
+            self.__valor2: float = self._gerar_valor
+            self.__resultado: float = self._gerar_resultado
 
     @property
     def dificuldade(self: object) -> int:
@@ -58,6 +65,34 @@ class Calcular:
             return randint(1, 50)
 
     @property
+    def _gerar_valor_divisao(self: object) -> tuple[int, int]:
+        if self.dificuldade == 1:
+            print(f"Dificuldade 1")
+            val1 = randint(1, 10)
+            val2 = randint(1, 10)
+            return val1, val2
+        if self.dificuldade == 2:
+            print(f"Dificuldade 2")
+            val1 = randint(1, 100)
+            val2 = randint(1, 100)
+            return val1, val2
+        if self.dificuldade == 3:
+            print(f"Dificuldade 3")
+            val1 = randint(1, 1000)
+            val2 = randint(1, 1000)
+            return val1, val2
+        if self.dificuldade == 4:
+            print(f"Dificuldade 4")
+            val1 = randint(1, 10000)
+            val2 = randint(1, 10000)
+            return val1, val2
+        else:
+            print(f"Dificuldade 0")
+            val1 = randint(1, 50)
+            val2 = randint(1, 50)
+            return val1, val2
+
+    @property
     def _gerar_resultado(self: object) -> int:
         if self.operacao == 1:  # Somar
             return self.valor1 + self.valor2
@@ -79,7 +114,7 @@ class Calcular:
         else:  # elif self.operacao == 4:
             return '/'
 
-    def checar_resultado(self: object, resposta: int) -> bool:
+    def checar_resultado(self: object, resposta: float) -> bool:
         certo: bool = False
 
         if self.resultado == resposta:

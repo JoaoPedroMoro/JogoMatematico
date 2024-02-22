@@ -29,3 +29,18 @@ As dificuldades são as seguintes:
 - Os valores a serem calculados são escolhidos aleatoriamente entre 1 e 10000.
 ### Outros valores
 - Caso a dificuldade não estiver no intervalo entre 1 e 4, os valores que devem ser calculados serão escolhidos aleatoriamente entre 0 e 50.
+
+## Versão 3
+O jogo foi modificado para guardar as 5 maiores pontuações obtidas na máquina e salvar o nome de cada usuário que registrou essa pontuação.
+Também foi modificado a lógica do jogo quando a operação é de divisão, sendo necessário informar apenas as 2 primeiras casas decimais aproximadas do número obtido.
+As dificuldades são as seguintes:
+### 1
+- Os valores a serem calculados são escolhidos aleatoriamente entre 1 e 10.
+### 2
+- Os valores a serem calculados são escolhidos aleatoriamente entre 1 e 100.
+### 3
+- Os valores a serem calculados são escolhidos aleatoriamente entre 1 e 1000.
+### 4
+- Os valores a serem calculados são escolhidos aleatoriamente entre 1 e 10000.
+### Outros valores
+- Caso a dificuldade não estiver no intervalo entre 1 e 4, os valores que devem ser calculados serão escolhidos aleatoriamente entre 0 e 50.
