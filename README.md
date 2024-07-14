@@ -61,3 +61,6 @@ As dificuldades são as seguintes:
 ### Outros valores
 - Caso a dificuldade não estiver no intervalo entre 1 e 4, os valores que devem ser calculados serão escolhidos aleatoriamente entre 0 e 50.
 Vale ressaltar que na operação de divisão inteira o valor do divisor respeita esse intervalo, enquanto o valor do dividendo pode ser até 100 vezes maior.
+
+## Versão 4.1
+Apenas introduzindo o ambiente virtual. o arquivo create_exe.txt ensina a como criar o executável do jogo, e a pasta jogoMatematico possui o executavel do jogo, para máquinas que não possuem python.
