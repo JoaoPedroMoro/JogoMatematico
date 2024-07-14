@@ -6,9 +6,14 @@ from random import randint
 # print(calc)
 
 while True:
-    val1 = randint(1, 10)
-    val2 = randint(1, 10)
+    # val1 = randint(1, 10)
+    # val2 = randint(1, 10)
+    #
+    # res = val1 / val2
+    # valor_decimal = round(res - int(res), 2)
+    # print(f"{val1}/{val2}={res}/{valor_decimal}")
 
-    res = val1 / val2
-    valor_decimal = round(res - int(res), 2)
-    print(f"{val1}/{val2}={res}/{valor_decimal}")
+    val2 = randint(1, 10)
+    multiplicador = randint(1, 10 * 100 // val2)
+    val1 = val2 * multiplicador
+    print(f"val1: {val1}, val2: {val2}, val1 / val2: {val1 / val2}")

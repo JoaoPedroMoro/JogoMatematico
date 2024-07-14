@@ -5,9 +5,15 @@ class Calcular:
 
     def __init__(self: object, dificuldade: int, /) -> None:
         self.__dificuldade: int = dificuldade
-        self.__operacao: int = randint(1, 4)  # 1-soma/2-subtração/3-multiplicação/4-divisão
+        self.__operacao: int = randint(1, 5)  # 1-soma/2-subtração/3-multiplicação/4-divisão inteira/5-divisão não inteira
         if self.__operacao == 4:
-            val1, val2 = self._gerar_valor_divisao
+            val1, val2 = self._gerar_valor_divisao_inteira
+            self.__valor1 = val1
+            self.__valor2 = val2
+            res = val1/val2
+            self.__resultado = res
+        elif self.__operacao == 5:
+            val1, val2 = self._gerar_valor_divisao_nao_inteira
             self.__valor1 = val1
             self.__valor2 = val2
             res = round(val1 / val2, 2)
@@ -40,13 +46,15 @@ class Calcular:
     def __str__(self: object) -> str:
         op: str = ''
         if self.operacao == 1:
-            op = 'Somar'
+            op = 'Adição'
         elif self.operacao == 2:
-            op = 'Diminuir'
+            op = 'Subtração'
         elif self.operacao == 3:
-            op = 'Multiplicar'
+            op = 'Multiplicação'
         elif self.operacao == 4:
-            op = 'Dividir'
+            op = 'Divisão inteira'
+        elif self.operacao == 5:
+            op = 'Divisão não inteira'
         else:
             op = 'Operação desconhecida'
         return f'Valor 1: {self.valor1}\nValor 2: {self.valor2}\nDificuldade: {self.dificuldade}\nOperação: {op}'
@@ -65,7 +73,41 @@ class Calcular:
             return randint(1, 50)
 
     @property
-    def _gerar_valor_divisao(self: object) -> tuple[int, int]:
+    def _gerar_valor_divisao_inteira(self: object) -> tuple[int, int]:
+        if self.dificuldade == 1:
+            print(f"Dificuldade 1")
+            val2 = randint(1, 10)
+            multiplicador = randint(1, 10 * 100 // val2)
+            val1 = val2 * multiplicador
+            print(val1, val2)
+            return val1, val2
+        if self.dificuldade == 2:
+            print(f"Dificuldade 2")
+            val2 = randint(1, 100)
+            multiplicador = randint(1, 100 * 100 // val2)
+            val1 = val2 * multiplicador
+            return val1, val2
+        if self.dificuldade == 3:
+            print(f"Dificuldade 3")
+            val2 = randint(1, 1000)
+            multiplicador = randint(1, 1000 * 100 // val2)
+            val1 = val2 * multiplicador
+            return val1, val2
+        if self.dificuldade == 4:
+            print(f"Dificuldade 4")
+            val2 = randint(1, 10000)
+            multiplicador = randint(1, 10000 * 100 // val2)
+            val1 = val2 * multiplicador
+            return val1, val2
+        else:
+            print(f"Dificuldade 0")
+            val2 = randint(1, 50)
+            multiplicador = randint(1, 50 * 100 // val2)
+            val1 = val2 * multiplicador
+            return val1, val2
+
+    @property
+    def _gerar_valor_divisao_nao_inteira(self: object) -> tuple[int, int]:
         if self.dificuldade == 1:
             print(f"Dificuldade 1")
             val1 = randint(1, 10)
@@ -94,13 +136,13 @@ class Calcular:
 
     @property
     def _gerar_resultado(self: object) -> int:
-        if self.operacao == 1:  # Somar
+        if self.operacao == 1:  # Adição
             return self.valor1 + self.valor2
-        elif self.operacao == 2:  # Diminuir
+        elif self.operacao == 2:  # Subtração
             return self.valor1 - self.valor2
-        elif self.operacao == 3:  # Multiplicar
+        elif self.operacao == 3:  # Multiplicação
             return self.valor1 * self.valor2
-        else:  #elif self.operacao == 4:  # Divisão
+        else:  #elif self.operacao == 4 or 5:  # Divisão
             return self.valor1 / self.valor2
 
     @property
@@ -111,7 +153,7 @@ class Calcular:
             return '-'
         elif self.operacao == 3:
             return '*'
-        else:  # elif self.operacao == 4:
+        else:  # elif self.operacao == 4 or 5:
             return '/'
 
     def checar_resultado(self: object, resposta: float) -> bool:
